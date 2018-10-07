@@ -1,0 +1,16 @@
+option java_package = "Myfox.ProtoBuf"; 
+option java_outer_classname = "MessageProbuf"; 
+
+//user senderid/receiverid : >0
+//server senderid/receiverid = -1
+
+message Message {
+    required int32 senderid = 1;
+    required string sendername = 2;
+    required string senderip = 3;
+    required string senderpwd = 4;
+    required string sendtext = 5;
+    required int32 receiverid = 6;
+    required string receivername = 7;
+    required string receiverip = 8;
+}

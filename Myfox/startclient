@@ -1,0 +1,4 @@
+#!/bin/bash
+#this script starts client
+pwd
+java -Djava.net.preferIPv4Stack=true -classpath /home/kourui/servertestdemo/Myfox/target:/home/kourui/netty4125/netty-4.1.25.Final/jar/all-in-one/netty-all-4.1.25.Final.jar:/home/kourui/protobuf-java-2.6.1.jar Myfox.Client.WelcomeUI

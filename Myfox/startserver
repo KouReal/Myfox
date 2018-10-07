@@ -1,0 +1,5 @@
+#!/bin/bash
+#this script starts client
+pwd
+#java -Djava.net.preferIPv4Stack=true -classpath /usr/share/java/mysql-connector-java-8.0.11.jar:/home/kourui/servertestdemo/Myfox/target:/home/kourui/netty4125/netty-4.1.25.Final/jar/all-in-one/netty-all-4.1.25.Final.jar:/home/kourui/protobuf-java-2.6.1.jar Myfox.Server.ServerCtrl
+java -Djava.net.preferIPv4Stack=true -classpath /root/protobuf-java-2.6.1.jar:/root/connectorj/usr/share/java/mysql-connector-java-8.0.11.jar:/root/netty-4.1.25.Final/jar/all-in-one/netty-all-4.1.25.Final.jar:/root/servertestdemo/Myfox/target Myfox.Server.ServerCtrl

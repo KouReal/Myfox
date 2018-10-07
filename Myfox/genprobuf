@@ -1,0 +1,4 @@
+#!/bin/bash
+#generate the probuf java file
+pwd
+protoc ./ProtoBuf/Message.proto --java_out=../

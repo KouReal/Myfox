@@ -1,0 +1,792 @@
+/home/kourui/servertestdemo/Myfox
+launching server-------------------------
+server is running-------------------------
+connecting to database-------------------------
+connect to database successfully------------------------
+/127.0.0.1:36160 上线了
+
+server receive : senderid: 0
+sendername: "no"
+senderip: "no"
+senderpwd: "no"
+sendtext: "connect"
+receiverid: -1
+receivername: "no"
+receiverip: "no"
+
+server receive : senderid: 1
+sendername: "no"
+senderip: "no"
+senderpwd: "123456"
+sendtext: "logincheck"
+receiverid: -1
+receivername: "server"
+receiverip: "no"
+
+start logincheck with db
+ManDB.checkaccount:SELECT accname FROM accountinfo where accnum =1 and  accpwd  = '123456'
+logincheck result:kourui
+server receive : senderid: 1
+sendername: "no"
+senderip: "no"
+senderpwd: "no"
+sendtext: "queryfriend"
+receiverid: -1
+receivername: "server"
+receiverip: "no"
+
+start queryfriend with db
+ManDB.queryfriend:Select accountinfo.accnum,accountinfo.accname from accountinfo inner join relation  where accountinfo.accnum = relation.relanum and  relation.accnum = 1 union Select accountinfo.accnum,accountinfo.accname from accountinfo inner join relation  where accountinfo.accnum = relation.accnum and relation.relanum = 1
+ManDB.queryfriend resultstr : 2==koukou==0++3==ruirui==0++6==k3==0
+queryfriend result : 2==koukou==0++3==ruirui==0++6==k3==0
+server receive : senderid: 1
+sendername: "no"
+senderip: "no"
+senderpwd: "no"
+sendtext: "queryaccount"
+receiverid: -1
+receivername: "4"
+receiverip: "no"
+
+start queryaccount with db
+ManDB.queryaccount:select accname from accountinfo where accnum = 4
+ManDB.queryaccount result :kk
+queryaccount result : kk
+server receive : senderid: 1
+sendername: "no"
+senderip: "no"
+senderpwd: "no"
+sendtext: "addfriend"
+receiverid: -1
+receivername: "4"
+receiverip: "no"
+
+start addfriend with db
+ManDB.addfriend:insert relation  values ('1','4')
+addfriend state : true
+/127.0.0.1:36160 下线了
+
+/127.0.0.1:36162 上线了
+
+server receive : senderid: 0
+sendername: "no"
+senderip: "no"
+senderpwd: "no"
+sendtext: "connect"
+receiverid: -1
+receivername: "no"
+receiverip: "no"
+
+server receive : senderid: 1
+sendername: "no"
+senderip: "no"
+senderpwd: "123456"
+sendtext: "logincheck"
+receiverid: -1
+receivername: "server"
+receiverip: "no"
+
+start logincheck with db
+ManDB.checkaccount:SELECT accname FROM accountinfo where accnum =1 and  accpwd  = '123456'
+logincheck result:kourui
+server receive : senderid: 1
+sendername: "no"
+senderip: "no"
+senderpwd: "no"
+sendtext: "queryfriend"
+receiverid: -1
+receivername: "server"
+receiverip: "no"
+
+start queryfriend with db
+ManDB.queryfriend:Select accountinfo.accnum,accountinfo.accname from accountinfo inner join relation  where accountinfo.accnum = relation.relanum and  relation.accnum = 1 union Select accountinfo.accnum,accountinfo.accname from accountinfo inner join relation  where accountinfo.accnum = relation.accnum and relation.relanum = 1
+ManDB.queryfriend resultstr : 2==koukou==0++3==ruirui==0++6==k3==0++4==kk==0
+queryfriend result : 2==koukou==0++3==ruirui==0++6==k3==0++4==kk==0
+server receive : senderid: 1
+sendername: "no"
+senderip: "no"
+senderpwd: "no"
+sendtext: "queryaccount"
+receiverid: -1
+receivername: "5"
+receiverip: "no"
+
+start queryaccount with db
+ManDB.queryaccount:select accname from accountinfo where accnum = 5
+ManDB.queryaccount result :k1
+queryaccount result : k1
+server receive : senderid: 1
+sendername: "no"
+senderip: "no"
+senderpwd: "no"
+sendtext: "addfriend"
+receiverid: -1
+receivername: "5"
+receiverip: "no"
+
+start addfriend with db
+ManDB.addfriend:insert relation  values ('1','5')
+addfriend state : true
+/127.0.0.1:36162 下线了
+
+/127.0.0.1:36178 上线了
+
+server receive : senderid: 0
+sendername: "no"
+senderip: "no"
+senderpwd: "no"
+sendtext: "connect"
+receiverid: -1
+receivername: "no"
+receiverip: "no"
+
+server receive : senderid: 1
+sendername: "no"
+senderip: "no"
+senderpwd: "123456"
+sendtext: "logincheck"
+receiverid: -1
+receivername: "server"
+receiverip: "no"
+
+start logincheck with db
+ManDB.checkaccount:SELECT accname FROM accountinfo where accnum =1 and  accpwd  = '123456'
+logincheck result:kourui
+server receive : senderid: 1
+sendername: "no"
+senderip: "no"
+senderpwd: "no"
+sendtext: "queryfriend"
+receiverid: -1
+receivername: "server"
+receiverip: "no"
+
+start queryfriend with db
+ManDB.queryfriend:Select accountinfo.accnum,accountinfo.accname from accountinfo inner join relation  where accountinfo.accnum = relation.relanum and  relation.accnum = 1 union Select accountinfo.accnum,accountinfo.accname from accountinfo inner join relation  where accountinfo.accnum = relation.accnum and relation.relanum = 1
+ManDB.queryfriend resultstr : 2==koukou==0++3==ruirui==0++6==k3==0++4==kk==0++5==k1==0
+queryfriend result : 2==koukou==0++3==ruirui==0++6==k3==0++4==kk==0++5==k1==0
+server receive : senderid: 1
+sendername: "no"
+senderip: "no"
+senderpwd: "no"
+sendtext: "queryaccount"
+receiverid: -1
+receivername: "2"
+receiverip: "no"
+
+start queryaccount with db
+ManDB.queryaccount:select accname from accountinfo where accnum = 2
+ManDB.queryaccount result :koukou
+queryaccount result : koukou
+server receive : senderid: 1
+sendername: "no"
+senderip: "no"
+senderpwd: "no"
+sendtext: "addfriend"
+receiverid: -1
+receivername: "2"
+receiverip: "no"
+
+start addfriend with db
+ManDB.addfriend:insert relation  values ('1','2')
+addfriend state : true
+server receive : senderid: 1
+sendername: "no"
+senderip: "no"
+senderpwd: "no"
+sendtext: "queryaccount"
+receiverid: -1
+receivername: "7"
+receiverip: "no"
+
+start queryaccount with db
+ManDB.queryaccount:select accname from accountinfo where accnum = 7
+ManDB.queryaccount result :
+queryaccount result : 
+server receive : senderid: 1
+sendername: "no"
+senderip: "no"
+senderpwd: "no"
+sendtext: "queryaccount"
+receiverid: -1
+receivername: "2"
+receiverip: "no"
+
+start queryaccount with db
+ManDB.queryaccount:select accname from accountinfo where accnum = 2
+ManDB.queryaccount result :koukou
+queryaccount result : koukou
+server receive : senderid: 1
+sendername: "no"
+senderip: "no"
+senderpwd: "no"
+sendtext: "queryaccount"
+receiverid: -1
+receivername: "1"
+receiverip: "no"
+
+start queryaccount with db
+ManDB.queryaccount:select accname from accountinfo where accnum = 1
+ManDB.queryaccount result :kourui
+queryaccount result : kourui
+server receive : senderid: 1
+sendername: "no"
+senderip: "no"
+senderpwd: "no"
+sendtext: "queryaccount"
+receiverid: -1
+receivername: "6"
+receiverip: "no"
+
+start queryaccount with db
+ManDB.queryaccount:select accname from accountinfo where accnum = 6
+ManDB.queryaccount result :k3
+queryaccount result : k3
+server receive : senderid: 2
+sendername: "no"
+senderip: "no"
+senderpwd: "3242"
+sendtext: "logincheck"
+receiverid: -1
+receivername: "server"
+receiverip: "no"
+
+start logincheck with db
+ManDB.checkaccount:SELECT accname FROM accountinfo where accnum =2 and  accpwd  = '3242'
+logincheck result:koukou
+server receive : senderid: 2
+sendername: "no"
+senderip: "no"
+senderpwd: "no"
+sendtext: "queryfriend"
+receiverid: -1
+receivername: "server"
+receiverip: "no"
+
+start queryfriend with db
+ManDB.queryfriend:Select accountinfo.accnum,accountinfo.accname from accountinfo inner join relation  where accountinfo.accnum = relation.relanum and  relation.accnum = 2 union Select accountinfo.accnum,accountinfo.accname from accountinfo inner join relation  where accountinfo.accnum = relation.accnum and relation.relanum = 2
+ManDB.queryfriend resultstr : 1==kourui==1
+queryfriend result : 1==kourui==1
+server receive : senderid: 2
+sendername: "no"
+senderip: "no"
+senderpwd: "no"
+sendtext: "queryaccount"
+receiverid: -1
+receivername: "1"
+receiverip: "no"
+
+start queryaccount with db
+ManDB.queryaccount:select accname from accountinfo where accnum = 1
+ManDB.queryaccount result :kourui
+queryaccount result : kourui
+/127.0.0.1:36178 下线了
+
+/127.0.0.1:36194 上线了
+
+server receive : senderid: 0
+sendername: "no"
+senderip: "no"
+senderpwd: "no"
+sendtext: "connect"
+receiverid: -1
+receivername: "no"
+receiverip: "no"
+
+server receive : senderid: 1
+sendername: "no"
+senderip: "no"
+senderpwd: "123456"
+sendtext: "logincheck"
+receiverid: -1
+receivername: "server"
+receiverip: "no"
+
+start logincheck with db
+ManDB.checkaccount:SELECT accname FROM accountinfo where accnum =1 and  accpwd  = '123456'
+logincheck result:kourui
+server receive : senderid: 1
+sendername: "no"
+senderip: "no"
+senderpwd: "no"
+sendtext: "queryfriend"
+receiverid: -1
+receivername: "server"
+receiverip: "no"
+
+start queryfriend with db
+ManDB.queryfriend:Select accountinfo.accnum,accountinfo.accname from accountinfo inner join relation  where accountinfo.accnum = relation.relanum and  relation.accnum = 1 union Select accountinfo.accnum,accountinfo.accname from accountinfo inner join relation  where accountinfo.accnum = relation.accnum and relation.relanum = 1
+ManDB.queryfriend resultstr : 2==koukou==1++3==ruirui==0++6==k3==0++4==kk==0++5==k1==0
+queryfriend result : 2==koukou==1++3==ruirui==0++6==k3==0++4==kk==0++5==k1==0
+server receive : senderid: 0
+sendername: "k5"
+senderip: "no"
+senderpwd: "1"
+sendtext: "registcheck"
+receiverid: -1
+receivername: "server"
+receiverip: "no"
+
+start registcheck with db
+ManDB.addaccount:insert accountinfo values(NULL,'k5','1','normal')
+ManDB.addaccount:select max(accnum) from accountinfo
+genid : 7
+server receive : senderid: 7
+sendername: "no"
+senderip: "no"
+senderpwd: "1"
+sendtext: "logincheck"
+receiverid: -1
+receivername: "server"
+receiverip: "no"
+
+start logincheck with db
+ManDB.checkaccount:SELECT accname FROM accountinfo where accnum =7 and  accpwd  = '1'
+logincheck result:k5
+server receive : senderid: 7
+sendername: "no"
+senderip: "no"
+senderpwd: "no"
+sendtext: "queryfriend"
+receiverid: -1
+receivername: "server"
+receiverip: "no"
+
+start queryfriend with db
+ManDB.queryfriend:Select accountinfo.accnum,accountinfo.accname from accountinfo inner join relation  where accountinfo.accnum = relation.relanum and  relation.accnum = 7 union Select accountinfo.accnum,accountinfo.accname from accountinfo inner join relation  where accountinfo.accnum = relation.accnum and relation.relanum = 7
+ManDB.queryfriend resultstr : 
+queryfriend result : 
+server receive : senderid: 7
+sendername: "no"
+senderip: "no"
+senderpwd: "no"
+sendtext: "queryaccount"
+receiverid: -1
+receivername: "1"
+receiverip: "no"
+
+start queryaccount with db
+ManDB.queryaccount:select accname from accountinfo where accnum = 1
+ManDB.queryaccount result :kourui
+queryaccount result : kourui
+server receive : senderid: 7
+sendername: "no"
+senderip: "no"
+senderpwd: "no"
+sendtext: "addfriend"
+receiverid: -1
+receivername: "1"
+receiverip: "no"
+
+start addfriend with db
+ManDB.addfriend:insert relation  values ('7','1')
+addfriend state : true
+server receive : senderid: 7
+sendername: "no"
+senderip: "no"
+senderpwd: "no"
+sendtext: "queryfriend"
+receiverid: -1
+receivername: "server"
+receiverip: "no"
+
+start queryfriend with db
+ManDB.queryfriend:Select accountinfo.accnum,accountinfo.accname from accountinfo inner join relation  where accountinfo.accnum = relation.relanum and  relation.accnum = 7 union Select accountinfo.accnum,accountinfo.accname from accountinfo inner join relation  where accountinfo.accnum = relation.accnum and relation.relanum = 7
+ManDB.queryfriend resultstr : 1==kourui==1
+queryfriend result : 1==kourui==1
+server receive : senderid: 7
+sendername: "no"
+senderip: "no"
+senderpwd: "no"
+sendtext: "queryaccount"
+receiverid: -1
+receivername: "2"
+receiverip: "no"
+
+start queryaccount with db
+ManDB.queryaccount:select accname from accountinfo where accnum = 2
+ManDB.queryaccount result :koukou
+queryaccount result : koukou
+server receive : senderid: 7
+sendername: "no"
+senderip: "no"
+senderpwd: "no"
+sendtext: "addfriend"
+receiverid: -1
+receivername: "2"
+receiverip: "no"
+
+start addfriend with db
+ManDB.addfriend:insert relation  values ('7','2')
+addfriend state : true
+server receive : senderid: 7
+sendername: "no"
+senderip: "no"
+senderpwd: "no"
+sendtext: "queryfriend"
+receiverid: -1
+receivername: "server"
+receiverip: "no"
+
+start queryfriend with db
+ManDB.queryfriend:Select accountinfo.accnum,accountinfo.accname from accountinfo inner join relation  where accountinfo.accnum = relation.relanum and  relation.accnum = 7 union Select accountinfo.accnum,accountinfo.accname from accountinfo inner join relation  where accountinfo.accnum = relation.accnum and relation.relanum = 7
+ManDB.queryfriend resultstr : 1==kourui==1++2==koukou==1
+queryfriend result : 1==kourui==1++2==koukou==1
+server receive : senderid: 7
+sendername: "no"
+senderip: "no"
+senderpwd: "no"
+sendtext: "queryaccount"
+receiverid: -1
+receivername: "2"
+receiverip: "no"
+
+start queryaccount with db
+ManDB.queryaccount:select accname from accountinfo where accnum = 2
+ManDB.queryaccount result :koukou
+queryaccount result : koukou
+server receive : senderid: 7
+sendername: "no"
+senderip: "no"
+senderpwd: "no"
+sendtext: "addfriend"
+receiverid: -1
+receivername: "2"
+receiverip: "no"
+
+start addfriend with db
+ManDB.addfriend:insert relation  values ('7','2')
+addfriend state : true
+server receive : senderid: 7
+sendername: "no"
+senderip: "no"
+senderpwd: "no"
+sendtext: "queryfriend"
+receiverid: -1
+receivername: "server"
+receiverip: "no"
+
+start queryfriend with db
+ManDB.queryfriend:Select accountinfo.accnum,accountinfo.accname from accountinfo inner join relation  where accountinfo.accnum = relation.relanum and  relation.accnum = 7 union Select accountinfo.accnum,accountinfo.accname from accountinfo inner join relation  where accountinfo.accnum = relation.accnum and relation.relanum = 7
+ManDB.queryfriend resultstr : 1==kourui==1++2==koukou==1
+queryfriend result : 1==kourui==1++2==koukou==1
+server receive : senderid: 7
+sendername: "no"
+senderip: "no"
+senderpwd: "no"
+sendtext: "addfriend"
+receiverid: -1
+receivername: "2"
+receiverip: "no"
+
+start addfriend with db
+ManDB.addfriend:insert relation  values ('7','2')
+addfriend state : true
+server receive : senderid: 7
+sendername: "no"
+senderip: "no"
+senderpwd: "no"
+sendtext: "queryfriend"
+receiverid: -1
+receivername: "server"
+receiverip: "no"
+
+start queryfriend with db
+ManDB.queryfriend:Select accountinfo.accnum,accountinfo.accname from accountinfo inner join relation  where accountinfo.accnum = relation.relanum and  relation.accnum = 7 union Select accountinfo.accnum,accountinfo.accname from accountinfo inner join relation  where accountinfo.accnum = relation.accnum and relation.relanum = 7
+ManDB.queryfriend resultstr : 1==kourui==1++2==koukou==1
+queryfriend result : 1==kourui==1++2==koukou==1
+server receive : senderid: 7
+sendername: "no"
+senderip: "no"
+senderpwd: "no"
+sendtext: "addfriend"
+receiverid: -1
+receivername: "2"
+receiverip: "no"
+
+start addfriend with db
+ManDB.addfriend:insert relation  values ('7','2')
+addfriend state : true
+server receive : senderid: 7
+sendername: "no"
+senderip: "no"
+senderpwd: "no"
+sendtext: "queryfriend"
+receiverid: -1
+receivername: "server"
+receiverip: "no"
+
+start queryfriend with db
+ManDB.queryfriend:Select accountinfo.accnum,accountinfo.accname from accountinfo inner join relation  where accountinfo.accnum = relation.relanum and  relation.accnum = 7 union Select accountinfo.accnum,accountinfo.accname from accountinfo inner join relation  where accountinfo.accnum = relation.accnum and relation.relanum = 7
+ManDB.queryfriend resultstr : 1==kourui==1++2==koukou==1
+queryfriend result : 1==kourui==1++2==koukou==1
+/127.0.0.1:36194 下线了
+
+/127.0.0.1:36560 上线了
+
+server receive : senderid: 0
+sendername: "no"
+senderip: "no"
+senderpwd: "no"
+sendtext: "connect"
+receiverid: -1
+receivername: "no"
+receiverip: "no"
+
+/127.0.0.1:36560 下线了
+
+/127.0.0.1:36562 上线了
+
+server receive : senderid: 0
+sendername: "no"
+senderip: "no"
+senderpwd: "no"
+sendtext: "connect"
+receiverid: -1
+receivername: "no"
+receiverip: "no"
+
+server receive : senderid: 1
+sendername: "no"
+senderip: "no"
+senderpwd: "123456"
+sendtext: "logincheck"
+receiverid: -1
+receivername: "server"
+receiverip: "no"
+
+start logincheck with db
+ManDB.checkaccount:SELECT accname FROM accountinfo where accnum =1 and  accpwd  = '123456'
+logincheck result:kourui
+server receive : senderid: 1
+sendername: "no"
+senderip: "no"
+senderpwd: "no"
+sendtext: "queryfriend"
+receiverid: -1
+receivername: "server"
+receiverip: "no"
+
+start queryfriend with db
+ManDB.queryfriend:Select accountinfo.accnum,accountinfo.accname from accountinfo inner join relation  where accountinfo.accnum = relation.relanum and  relation.accnum = 1 union Select accountinfo.accnum,accountinfo.accname from accountinfo inner join relation  where accountinfo.accnum = relation.accnum and relation.relanum = 1
+ManDB.queryfriend resultstr : 2==koukou==1++3==ruirui==0++6==k3==0++4==kk==0++5==k1==0++7==k5==1
+queryfriend result : 2==koukou==1++3==ruirui==0++6==k3==0++4==kk==0++5==k1==0++7==k5==1
+/127.0.0.1:36562 下线了
+
+/127.0.0.1:36564 上线了
+
+server receive : senderid: 0
+sendername: "no"
+senderip: "no"
+senderpwd: "no"
+sendtext: "connect"
+receiverid: -1
+receivername: "no"
+receiverip: "no"
+
+server receive : senderid: 1
+sendername: "no"
+senderip: "no"
+senderpwd: "123456"
+sendtext: "logincheck"
+receiverid: -1
+receivername: "server"
+receiverip: "no"
+
+start logincheck with db
+ManDB.checkaccount:SELECT accname FROM accountinfo where accnum =1 and  accpwd  = '123456'
+logincheck result:kourui
+server receive : senderid: 1
+sendername: "no"
+senderip: "no"
+senderpwd: "no"
+sendtext: "queryfriend"
+receiverid: -1
+receivername: "server"
+receiverip: "no"
+
+start queryfriend with db
+ManDB.queryfriend:Select accountinfo.accnum,accountinfo.accname from accountinfo inner join relation  where accountinfo.accnum = relation.relanum and  relation.accnum = 1 union Select accountinfo.accnum,accountinfo.accname from accountinfo inner join relation  where accountinfo.accnum = relation.accnum and relation.relanum = 1
+ManDB.queryfriend resultstr : 2==koukou==1++3==ruirui==0++6==k3==0++4==kk==0++5==k1==0++7==k5==1
+queryfriend result : 2==koukou==1++3==ruirui==0++6==k3==0++4==kk==0++5==k1==0++7==k5==1
+/127.0.0.1:36564 下线了
+
+/127.0.0.1:36566 上线了
+
+server receive : senderid: 0
+sendername: "no"
+senderip: "no"
+senderpwd: "no"
+sendtext: "connect"
+receiverid: -1
+receivername: "no"
+receiverip: "no"
+
+server receive : senderid: 1
+sendername: "no"
+senderip: "no"
+senderpwd: "123456"
+sendtext: "logincheck"
+receiverid: -1
+receivername: "server"
+receiverip: "no"
+
+start logincheck with db
+ManDB.checkaccount:SELECT accname FROM accountinfo where accnum =1 and  accpwd  = '123456'
+logincheck result:kourui
+server receive : senderid: 1
+sendername: "no"
+senderip: "no"
+senderpwd: "no"
+sendtext: "queryfriend"
+receiverid: -1
+receivername: "server"
+receiverip: "no"
+
+start queryfriend with db
+ManDB.queryfriend:Select accountinfo.accnum,accountinfo.accname from accountinfo inner join relation  where accountinfo.accnum = relation.relanum and  relation.accnum = 1 union Select accountinfo.accnum,accountinfo.accname from accountinfo inner join relation  where accountinfo.accnum = relation.accnum and relation.relanum = 1
+ManDB.queryfriend resultstr : 2==koukou==1++3==ruirui==0++6==k3==0++4==kk==0++5==k1==0++7==k5==1
+queryfriend result : 2==koukou==1++3==ruirui==0++6==k3==0++4==kk==0++5==k1==0++7==k5==1
+server receive : senderid: 1
+sendername: "no"
+senderip: "no"
+senderpwd: "no"
+sendtext: "queryfriend"
+receiverid: -1
+receivername: "server"
+receiverip: "no"
+
+start queryfriend with db
+ManDB.queryfriend:Select accountinfo.accnum,accountinfo.accname from accountinfo inner join relation  where accountinfo.accnum = relation.relanum and  relation.accnum = 1 union Select accountinfo.accnum,accountinfo.accname from accountinfo inner join relation  where accountinfo.accnum = relation.accnum and relation.relanum = 1
+ManDB.queryfriend resultstr : 2==koukou==1++3==ruirui==0++6==k3==0++4==kk==0++5==k1==0++7==k5==1
+queryfriend result : 2==koukou==1++3==ruirui==0++6==k3==0++4==kk==0++5==k1==0++7==k5==1
+server receive : senderid: 1
+sendername: "no"
+senderip: "no"
+senderpwd: "no"
+sendtext: "queryaccount"
+receiverid: -1
+receivername: "8"
+receiverip: "no"
+
+start queryaccount with db
+ManDB.queryaccount:select accname from accountinfo where accnum = 8
+ManDB.queryaccount result :
+queryaccount result : 
+server receive : senderid: 1
+sendername: "no"
+senderip: "no"
+senderpwd: "no"
+sendtext: "queryaccount"
+receiverid: -1
+receivername: "2"
+receiverip: "no"
+
+start queryaccount with db
+ManDB.queryaccount:select accname from accountinfo where accnum = 2
+ManDB.queryaccount result :koukou
+queryaccount result : koukou
+server receive : senderid: 1
+sendername: "no"
+senderip: "no"
+senderpwd: "no"
+sendtext: "addfriend"
+receiverid: -1
+receivername: "2"
+receiverip: "no"
+
+start addfriend with db
+ManDB.addfriend:insert relation  values ('1','2')
+addfriend state : true
+server receive : senderid: 1
+sendername: "no"
+senderip: "no"
+senderpwd: "no"
+sendtext: "queryfriend"
+receiverid: -1
+receivername: "server"
+receiverip: "no"
+
+start queryfriend with db
+ManDB.queryfriend:Select accountinfo.accnum,accountinfo.accname from accountinfo inner join relation  where accountinfo.accnum = relation.relanum and  relation.accnum = 1 union Select accountinfo.accnum,accountinfo.accname from accountinfo inner join relation  where accountinfo.accnum = relation.accnum and relation.relanum = 1
+ManDB.queryfriend resultstr : 2==koukou==1++3==ruirui==0++6==k3==0++4==kk==0++5==k1==0++7==k5==1
+queryfriend result : 2==koukou==1++3==ruirui==0++6==k3==0++4==kk==0++5==k1==0++7==k5==1
+server receive : senderid: 1
+sendername: "no"
+senderip: "no"
+senderpwd: "no"
+sendtext: "queryfriend"
+receiverid: -1
+receivername: "server"
+receiverip: "no"
+
+start queryfriend with db
+ManDB.queryfriend:Select accountinfo.accnum,accountinfo.accname from accountinfo inner join relation  where accountinfo.accnum = relation.relanum and  relation.accnum = 1 union Select accountinfo.accnum,accountinfo.accname from accountinfo inner join relation  where accountinfo.accnum = relation.accnum and relation.relanum = 1
+ManDB.queryfriend resultstr : 2==koukou==1++3==ruirui==0++6==k3==0++4==kk==0++5==k1==0++7==k5==1
+queryfriend result : 2==koukou==1++3==ruirui==0++6==k3==0++4==kk==0++5==k1==0++7==k5==1
+/127.0.0.1:36566 下线了
+
+/127.0.0.1:37222 上线了
+
+server receive : senderid: 0
+sendername: "no"
+senderip: "no"
+senderpwd: "no"
+sendtext: "connect"
+receiverid: -1
+receivername: "no"
+receiverip: "no"
+
+/127.0.0.1:37222 下线了
+
+/127.0.0.1:37400 上线了
+
+server receive : senderid: 0
+sendername: "no"
+senderip: "no"
+senderpwd: "no"
+sendtext: "connect"
+receiverid: -1
+receivername: "no"
+receiverip: "no"
+
+server receive : senderid: 7
+sendername: "no"
+senderip: "no"
+senderpwd: "1"
+sendtext: "logincheck"
+receiverid: -1
+receivername: "server"
+receiverip: "no"
+
+start logincheck with db
+ManDB.checkaccount:SELECT accname FROM accountinfo where accnum =7 and  accpwd  = '1'
+logincheck result:k5
+server receive : senderid: 7
+sendername: "no"
+senderip: "no"
+senderpwd: "no"
+sendtext: "queryfriend"
+receiverid: -1
+receivername: "server"
+receiverip: "no"
+
+start queryfriend with db
+ManDB.queryfriend:Select accountinfo.accnum,accountinfo.accname from accountinfo inner join relation  where accountinfo.accnum = relation.relanum and  relation.accnum = 7 union Select accountinfo.accnum,accountinfo.accname from accountinfo inner join relation  where accountinfo.accnum = relation.accnum and relation.relanum = 7
+ManDB.queryfriend resultstr : 1==kourui==0++2==koukou==1
+queryfriend result : 1==kourui==0++2==koukou==1
+server receive : senderid: 7
+sendername: "no"
+senderip: "no"
+senderpwd: "no"
+sendtext: "queryfriend"
+receiverid: -1
+receivername: "server"
+receiverip: "no"
+
+start queryfriend with db
+ManDB.queryfriend:Select accountinfo.accnum,accountinfo.accname from accountinfo inner join relation  where accountinfo.accnum = relation.relanum and  relation.accnum = 7 union Select accountinfo.accnum,accountinfo.accname from accountinfo inner join relation  where accountinfo.accnum = relation.accnum and relation.relanum = 7
+ManDB.queryfriend resultstr : 1==kourui==0++2==koukou==1
+queryfriend result : 1==kourui==0++2==koukou==1
+/127.0.0.1:37400 下线了
+
