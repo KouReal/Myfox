@@ -1,0 +1,28 @@
+DROP DATABASE IF EXISTS `MyfoxDB`;
+CREATE DATABASE IF NOT EXISTS MyfoxDB;
+USE MyfoxDB;
+
+DROP TABLE IF EXISTS `accountinfo`;
+CREATE TABLE IF NOT EXISTS `MyfoxDB`.`accountinfo` (
+`accnum` INT AUTO_INCREMENT NOT NULL,
+`accname` VARCHAR(20) NOT NULL,
+`accpwd` VARCHAR(20) NOT NULL,
+`acctype` VARCHAR(20),
+PRIMARY KEY(`accnum`));
+
+DROP TABLE IF EXISTS `relation`;
+CREATE TABLE IF NOT EXISTS `relation` (
+`accnum` INT NOT NULL,
+`relanum` INT NOT NULL);
+
+DROP TABLE IF EXISTS `onlineid`;
+CREATE TABLE IF NOT EXISTS `onlineid`(
+`accnum` INT NOT NULL,
+`accname` VARCHAR(20) NOT NULL);
+
+ALTER TABLE `onlineid` ADD CONSTRAINT fk_infoonline FOREIGN KEY(`accnum`) REFERENCES `accountinfo`(`accnum`);
+
+ALTER TABLE `relation` ADD CONSTRAINT fk_infoacc FOREIGN KEY(`accnum`) REFERENCES `accountinfo`(`accnum`);
+ALTER TABLE `relation` ADD CONSTRAINT fk_inforela FOREIGN KEY(`relanum`) REFERENCES `accountinfo`(`accnum`);
+
+INSERT INTO `accountinfo` VALUES(NULL,'kourui','123456','normal');
